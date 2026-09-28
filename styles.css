@@ -1,0 +1,489 @@
+/* =========================================================
+   DyM Stickers - styles.css
+   Proyecto Front End JS - Talento Tech
+   ========================================================= */
+
+/* ---------- RESETEO BÁSICO ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #333333;
+    background-color: #f7e7f3;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ---------- HEADER ---------- */
+
+.header {
+    background-color: #fefefe;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header__contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+.nav__lista {
+    display: flex;
+    gap: 25px;
+}
+
+.nav__lista a {
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav__lista a:hover {
+    color: #e65a9c;
+}
+
+/* ---------- HERO / INICIO ---------- */
+
+.hero {
+    max-width: 1200px;
+    min-height: 650px;
+    margin: 0 auto;
+    padding: 70px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero__contenido {
+    flex: 1;
+}
+
+.hero__etiqueta,
+.seccion__etiqueta {
+    color: #e65a9c;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero__contenido > p:not(.hero__etiqueta) {
+    max-width: 560px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero__imagen {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero__imagen img {
+    border-radius: 25px;
+}
+
+/* ---------- BOTONES ---------- */
+
+.boton {
+    display: inline-block;
+    background-color: #e65a9c;
+    color: #ffffff;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #c94180;
+    transform: translateY(-2px);
+}
+
+.boton--secundario {
+    background-color: #333333;
+}
+
+.boton--secundario:hover {
+    background-color: #111111;
+}
+
+/* ---------- SECCIONES ---------- */
+
+.seccion {
+    padding: 90px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seccion--clara {
+    max-width: none;
+    background-color: #ffffff;
+}
+
+.seccion__encabezado {
+    max-width: 700px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.seccion__encabezado h2,
+.presentacion h2,
+.contacto h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+/* ---------- PRODUCTOS / FLEXBOX ---------- */
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.producto {
+    background-color: #ffffff;
+    width: 260px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-6px);
+}
+
+.producto > img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.producto__contenido {
+    padding: 22px;
+}
+
+.producto__contenido h3 {
+    margin-bottom: 10px;
+}
+
+.producto__contenido p {
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.producto__contenido a {
+    color: #e65a9c;
+    font-weight: 700;
+}
+
+/* ---------- PRESENTACIÓN / BACKGROUND ---------- */
+
+.presentacion {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 80px 30px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    background: linear-gradient(135deg, #ffe7f2, #f4e8ff);
+    border-radius: 25px;
+}
+
+.presentacion__imagen,
+.presentacion__contenido {
+    flex: 1;
+}
+
+.presentacion__imagen img {
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.presentacion__contenido p:not(.seccion__etiqueta) {
+    margin-bottom: 25px;
+}
+
+/* ---------- RESEÑAS / GRID ---------- */
+
+.resenas {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px 90px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.resena {
+    background-color: #fff8fc;
+    border: 1px solid #f1dce7;
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.resena__estrellas {
+    color: #e65a9c;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.resena p {
+    margin-bottom: 15px;
+}
+
+.resena h3 {
+    font-size: 14px;
+}
+
+/* ---------- CONTACTO ---------- */
+
+.contacto {
+    display: flex;
+    gap: 70px;
+    align-items: flex-start;
+}
+
+.contacto__texto,
+.formulario {
+    flex: 1;
+}
+
+.contacto__texto > p:not(.seccion__etiqueta) {
+    margin-bottom: 25px;
+}
+
+.contacto__datos {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+.formulario {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.formulario__campo {
+    margin-bottom: 20px;
+}
+
+.formulario label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 13px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    outline: 2px solid #e65a9c;
+    border-color: transparent;
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.boton--formulario {
+    border: none;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+}
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+    background-color: #27232a;
+    color: #ffffff;
+    padding: 60px 30px 20px;
+}
+
+.footer__contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.logo--footer {
+    color: #ff8fbe;
+}
+
+.footer h3 {
+    margin-bottom: 12px;
+}
+
+.footer__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer__lista a:hover {
+    color: #ff8fbe;
+}
+
+.footer__abajo {
+    max-width: 1200px;
+    margin: 45px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #4b454e;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* =========================================================
+   MEDIA QUERIES - DISEÑO RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .hero__contenido > p:not(.hero__etiqueta) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .presentacion {
+        margin-left: 20px;
+        margin-right: 20px;
+        flex-direction: column;
+    }
+
+    .contacto {
+        flex-direction: column;
+    }
+
+    .contacto__texto,
+    .formulario {
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .header__contenedor {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    .nav__lista {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 55px 20px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero__contenido > p:not(.hero__etiqueta) {
+        font-size: 16px;
+    }
+
+    .seccion {
+        padding: 65px 20px;
+    }
+
+    .seccion__encabezado h2,
+    .presentacion h2,
+    .contacto h2 {
+        font-size: 30px;
+    }
+
+    .producto {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .resenas {
+        grid-template-columns: 1fr;
+        padding: 0 20px 65px;
+    }
+
+    .presentacion {
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0;
+        padding: 60px 20px;
+    }
+
+    .formulario {
+        padding: 25px;
+    }
+
+    .footer__contenido {
+        flex-direction: column;
+    }
+}
